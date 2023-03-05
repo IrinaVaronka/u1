@@ -1,3 +1,5 @@
+
+
 function List({ list, setDeleteData, setModalData}) {
 
     const destroy = n => {
@@ -7,6 +9,7 @@ function List({ list, setDeleteData, setModalData}) {
     const edit = n => {
         setModalData(n);
     }
+
 
     if (null === list) {
         return (
@@ -27,8 +30,12 @@ function List({ list, setDeleteData, setModalData}) {
             <ul className="list-group">
                 { 
                 
-                    list.length ? list.map(n => <li key={n.id} className="list-group-item">
-                        {n.name} {n.size}
+                    list.length 
+                    ? 
+                    list
+                    .sort((a, b) => a.lastName.localeCompare(b.lastName))
+                    .map(n => <li key={n.id} className="list-group-item">
+                        {n.name} {n.lastName} {n.size}
                         
                         <div className="ed-button" onClick={() => edit(n)}></div>
                         <div className="d-grid gap-2 d-md-flex justify-content-md-end">

@@ -27,8 +27,10 @@ function Edit ({setEditData, modalData, setModalData}) {
             id: modalData.id
         });
         setModalData(null);
-       
     }
+    const rem = _ => {
+        setSize(0);
+     }
 
     if (null === modalData) {
         return null;
@@ -58,7 +60,7 @@ function Edit ({setEditData, modalData, setModalData}) {
                     </div>
                 </div>
                 <div className="modal-footer">
-                    <button type="button" className="btn btn-outline-secondary" onClick={() => setModalData(null)}>deduct funds</button>
+                    <button type="button" className="btn btn-outline-secondary" onClick={rem}>deduct funds</button>
                     <button type="button" className="btn btn-outline-primary" onClick={edit}>add funds</button>
                 </div>
             </div>

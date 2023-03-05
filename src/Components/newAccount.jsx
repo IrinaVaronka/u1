@@ -38,7 +38,7 @@ function NewAccount ({setCreateData}) {
                 <input type="text" className="form-control" onChange={doName} value={name}/>
             </div>
             <div className="m-3">
-            <label className="form-label">An initial amount is <i>{size}</i></label>
+            <label className="form-label">An initial amount is 0 <i>{doFundSize}</i></label>
             
         </div>
         

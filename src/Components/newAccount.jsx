@@ -7,17 +7,24 @@ function NewAccount ({setCreateData}) {
 
 
     const [name, setName] = useState('');
+    const [size, setSize] = useState(0);
 
 
     const doName = e => {
         setName(e.target.value);
     }
 
+    const doFundSize = e => {
+        setSize(e.target.value);
+    }
+
     const create = () => {
         setCreateData({
-            name
+            name,
+            size
         });
         setName('')
+        setSize(0)
     }
 
     return (
@@ -30,6 +37,10 @@ function NewAccount ({setCreateData}) {
                 <label className="form-label">Enter your name and last name</label>
                 <input type="text" className="form-control" onChange={doName} value={name}/>
             </div>
+            <div className="m-3">
+            <label className="form-label">An initial amount is <i>{size}</i></label>
+            
+        </div>
         
             <button type="button" className = "btn btn-primary m-4" onClick={create}>Create new account</button>
 

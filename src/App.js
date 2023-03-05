@@ -1,28 +1,60 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useEffect, useState } from 'react';
 import './App.scss';
-import AccountList from './Components/accountList';
+import List from './Components/List';
 import NewAccount from './Components/newAccount';
+import { create, destroy, read } from './Functions/localStorage';
+
+
+const KEY = 'NameList';
+
 
 function App() {
 
+  const [list, setList] = useState(null);
+  const [lastRefresh, setLastRefresh] = useState(Date.now());
+  const [createData, setCreateData] = useState(null);
+  const [deleteData, setDeleteData] = useState(null);
+  
+  useEffect(() => {
+    setList(read(KEY));
+}, [lastRefresh]);
 
+
+  useEffect(() => {
+    if (null === createData) {
+        return;
+    }
+    create(KEY, createData);
+    setLastRefresh(Date.now())
+}, [createData]);
+
+useEffect(() => {
+  if (null === deleteData) {
+      return;
+  }
+  // tipo klientas
+  setList(l => l.filter(d => deleteData.id !== d.id));
+
+  // tipo serverio
+  destroy(KEY, deleteData.id);
+  setLastRefresh(Date.now());
+}, [deleteData]);
 
 
   return (
-   
-    <div className="App">
-      <header className="App-header">
 
-      <NewAccount />
-
-      <AccountList />
-
-
-
-      </header>
+    <div className="container">
+      <div className="row">
+        <div className="col-4">
+          <NewAccount setCreateData={setCreateData}/>
+        </div>
+        <div className="col-8">
+          <List list={list} setDeleteData={setDeleteData}/>
+        </div>
+      </div>
     </div>
-    
-   
+
   );
 }
 

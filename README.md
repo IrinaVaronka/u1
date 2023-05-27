@@ -1,22 +1,22 @@
 # About
 
-## U1 Bankas REACT
+## Bank REACT
 
-REACT banko aplikacijos versija
+REACT bank application version
 
-Banką sudaro puslapis, kuriame yra:
+** The bank consists of a page that contains:
 
-Sąskaitų sąrašas su Vardu, Pavarde, Sąskaitos suma, Mygtuku “ištrinti”,  laukeliu vertei įrašyti ir dviem mygtukais tam laukeliui: “pridėti lėšų” ir “nuskaičiuoti lėšas”;
+1. List of accounts with Name, Surname, Account amount, "delete" button, a field to enter the value and two buttons for that field: "add funds" and "deduct funds";
 
-Naujos sąskaitos sukūrimas (įvedami duomenys: vardas ir pavardė.
+2. Creating a new account (enter data: name and surname).
 
-Paaiškinimai ir reikalavimai.
+** Explanations and requirements.
 
-Nauja sąskaita sukuriama su pradine 0 suma, o lėšos pridedamos/nuimamos sąraše įvedant sumą ir spaudžiant atitinkamą mygtuką.
-Sąskaitos, kurioje yra lėšų ištrinti neturi būti galima.
-Sąskaitoje likusi suma negali būti minusinė. 
-Sąskaitas saraše rūšiuoti pagal savininko pavardę.
-Duomenų bazė - LocalStorage.
+1. A new account is created with an initial amount of 0, and funds are added/withdrawn by entering the amount in the list and pressing the appropriate button.
+2. An account containing funds cannot be deleted.
+3. The amount remaining in the account cannot be negative.
+4. Sort the accounts in the list by the last name of the owner.
+5. Database - LocalStorage.
 
 
 

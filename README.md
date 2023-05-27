@@ -4,13 +4,13 @@
 
 REACT bank application version
 
-** The bank consists of a page that contains:
+* * The bank consists of a page that contains:
 
 1. List of accounts with Name, Surname, Account amount, "delete" button, a field to enter the value and two buttons for that field: "add funds" and "deduct funds";
 
 2. Creating a new account (enter data: name and surname).
 
-** Explanations and requirements.
+* * Explanations and requirements.
 
 1. A new account is created with an initial amount of 0, and funds are added/withdrawn by entering the amount in the list and pressing the appropriate button.
 2. An account containing funds cannot be deleted.

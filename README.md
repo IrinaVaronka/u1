@@ -1,6 +1,6 @@
 # About
 
-# U1 Bankas REACT
+## U1 Bankas REACT
 
 REACT banko aplikacijos versija
 

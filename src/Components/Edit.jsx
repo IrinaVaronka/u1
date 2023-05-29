@@ -18,7 +18,7 @@ function Edit ({setEditData, modalData, setModalData}) {
     
 
     const doFundSize = e => {
-        setSize(e.target.value);
+        setSize(e.target.value)
     }
 
     const edit = () => {
@@ -52,7 +52,7 @@ function Edit ({setEditData, modalData, setModalData}) {
                         <div className="card-body">
                             <div className="m-3">
                                 <label className="form-label">Enter your funds</label>
-                                <input type="text" className="form-control"min='0' onChange={doFundSize} value={size} />
+                                <input type="text" className="form-control" min="0" onChange={doFundSize} value={size} />
                             </div>
                         
                             
@@ -60,8 +60,8 @@ function Edit ({setEditData, modalData, setModalData}) {
                     </div>
                 </div>
                 <div className="modal-footer">
-                    <button type="button" className="btn btn-outline-secondary" onClick={rem}>deduct funds</button>
-                    <button type="button" className="btn btn-outline-primary" onClick={edit}>add funds</button>
+                    <button type="button" className="btn btn-secondary deduct" onClick={rem}>deduct funds</button>
+                    <button type="button" className="btn btn-primary add" onClick={edit}>add funds</button>
                 </div>
             </div>
         </div>

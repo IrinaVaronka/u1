@@ -23,6 +23,7 @@ function NewAccount ({setCreateData}) {
     }
 
     const create = () => {
+        if (name.trim() !== '' && lastName.trim() !== ''){
         setCreateData({
             name,
             lastName,
@@ -31,6 +32,9 @@ function NewAccount ({setCreateData}) {
         setName('')
         setLastName('')
         setSize(0)
+    } else {
+        alert ("Please enter name and lastname");
+    }
     }
 
     return (
@@ -61,86 +65,3 @@ function NewAccount ({setCreateData}) {
 export default NewAccount;
 
 
-// const [name, setName] = useState('');
-// const [lastName, setLastName] = useState('');
-// const [fullList, setFullList] = useState([]);
-
-
-// const doName = e => {
-//     setName(e.target.value);
-// }
-// const doLastName = e => {
-//     setLastName(e.target.value);
-// }
-
-// const addName = () => {
-//     setFullList(l => [...l, 
-//         {
-//         id: uuidv4(),
-//         name, 
-//         lastName
-//     }
-// ]);
-//     setName('');
-//     setLastName('');
-// }
-
-// const del = id => {
-//     setFullList(l => l.filter(l => id !== l.id));
-// }
-
-
-/* <>
-        <div className="input-group col-sm-7">
-        <span className="input-group-text">First name</span>
-        <input className="text" aria-label="First name" class="form-control"onChange={doName} value={name}/>
-        <span className="input-group-text">Last name</span>
-        <input className="text" aria-label="Last name" class="form-control" onChange={doLastName} value={lastName}/>
-        <button className="btn btn-primary" type="create" onClick={addName}>Create new account</button>  
-        </div>
-
-<div className="container">
-<div className="row align-items-start">
-<ul className="col-4">
-<li className="list-group-item">Name</li>
-</ul>
-<ul className="col-4">
-<li className="list-group-item">Last Name</li>
-</ul>
-<ul className="col-2">
-<li className="list-group-item">Account amount</li>
-</ul>
-<ul className="col-2">
-<li className="list-group-item">Account action</li>
-</ul>
-
-</div>
-</div>  
-
-<div className="container">
-<div className="row align-items-start">
-  <ul className="col-4">
-    {
-      fullList.map((n, i) => <li key={i} className="list-group-item">{n.name}</li>)
-    }
-   
-  </ul>
-  <ul className="col-4 horizontal">
-    {  
-    fullList.map((n, i) => <li key={i} className="list-group-item">{n.lastName}
-    <button className="btn btn-primary" onClick={() => del(n.id)}>Delete account</button>
-    </li>)
-    }
-  </ul>
-  <ul className="col-2">
-  <li className="list-group-item"></li>
-  </ul>
-  <ul className="col-2">
-   
-  </ul>
-</div>
-</div>
-   
-</> */
-
-    

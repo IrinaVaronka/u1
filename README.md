@@ -1,3 +1,25 @@
+# About
+
+## Bank REACT
+
+REACT bank application version
+
+### The bank consists of a page that contains:
+
+1. List of accounts with Name, Surname, Account amount, "delete" button, a field to enter the value and two buttons for that field: "add funds" and "deduct funds";
+
+2. Creating a new account (enter data: name and surname).
+
+### Explanations and requirements.
+
+1. A new account is created with an initial amount of 0, and funds are added/withdrawn by entering the amount in the list and pressing the appropriate button.
+2. An account containing funds cannot be deleted.
+3. The amount remaining in the account cannot be negative.
+4. Sort the accounts in the list by the last name of the owner.
+5. Database - LocalStorage.
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
